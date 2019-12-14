@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #272828;
+    --secondary-color: #000000;
+    --font-color: #ffffff;
+    --bg-color: #ffffff;
+    --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #a1a3a3;
+    --secondary-color: #818cab;
+    --font-color: #ffffff;
+    --bg-color: #121212;
+    --heading-color: #818cab;
+}
+
+
+
+html {
+  box-sizing:border-box;
+  background: var(--bg-color); 
+}
+
+.changes {
+  margin-left: 20px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.space-bar {
+align-items: center;
+justify-content: space-around;
+width: 50%;
+background: var(--primary-color);
+color: var(--font-color);
+font-size: 20px;
+border-radius: 10px;
+}
+
+.space-bar a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+header {
+  text-align: center;
+  margin: 20px;
+  width: 95%;
+  border: 1px red solid;
+  color: var(--primary-color);
+}
+
+ /*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  display: block;
+  align-items: center;
+}
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: red;
+  }
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.key-row {
+  display:flex;
+  margin:0 auto 7px;
+  flex-wrap: wrap;   
+}
+
+
+
+.key {
+  width: 100px;
+  height: auto;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+  margin: 5px;
+  border: solid 1px var(--primary-color);
+  box-shadow: 1px 1px;
+  perspective: 600px;
+  background: #ffffff;
+
+
+}
+
+.key img {
+  width: 100px;
+  height: auto;
+    
+  
+ 
+}
+
+.key p {
+    color: var(--font-color);
+    background: var(--primary-color);
+    width:100%;
+    font-size: 18px;
+    text-align: center;
+    padding: 0;
+    margin:0;
+    text-transform: uppercase;
+ 
+  }
+
+
+
+.sides {
+ position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+
+.back-key {
+    background: red;
+  transform: rotateY(180deg);
+}
+
+.playing {
+  transform: rotateY(180deg);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #000000;
+
+}
+
+@media only screen and (max-width: 767px) {
+  .container-2 {
+    display: block;
+  }
+.keyboard {
+  padding: 0;
+  margin: 0;
+}
+
+.key-row {
+    flex-direction: column;
+
+}
+
+.key {
+    width: 200px;
+    height: 200px;
+    padding-bottom: 25px;
+}
+
+.key img {
+  width: 200px;
+  height: 200px;
+}
+
+.key p {
+  width: 200px;
+}
+
+
+}
