@@ -59,11 +59,11 @@ body {
 	font-size: 18px;
 }
 
-.space-bar a:hover {
+ a:hover {
 	color: var(--border-color);
 }
 
-.space-bar a {
+ a {
 	color: var(--font-color);
 	text-decoration: none;
 }
@@ -105,7 +105,6 @@ header img {
 	font-style: italic;
 }
 
-
 .key-row {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -129,8 +128,7 @@ header img {
 	border: solid 1px var(--border-color);
 	-webkit-perspective: 600px;
 	perspective: 600px;
-    background: #ffffff;
-
+	background: #ffffff;
 }
 
 .key img {
@@ -232,3 +230,13 @@ header img {
 		align-items: center;
 	}
 }
+
+footer {
+	background-color: var(--primary-color);
+	padding: 0.5rem;
+	color: var(--font-color);
+	text-align: center;
+	font-size: 16px;
+}
+
+
